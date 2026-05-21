@@ -1,0 +1,49 @@
+name: User Story
+description: Create a sprint-ready feature story
+title: "[User Story]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What problem are we solving?
+      placeholder: Describe the problem or opportunity.
+    validations:
+      required: true
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal / Outcome
+      description: What is the desired outcome?
+      placeholder: Describe expected business or user value.
+    validations:
+      required: true
+
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Requirements
+      description: What requirements or constraints exist?
+      placeholder: |
+        - Requirement 1
+        - Requirement 2
+        - Constraint
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical_context
+    attributes:
+      label: Technical Context
+      description: Relevant engineering details
+      placeholder: APIs, systems, dependencies, risks, screenshots, etc.
+
+  - type: textarea
+    id: qa_notes
+    attributes:
+      label: QA Considerations
+      description: Areas of concern or regression risk
+      placeholder: Regression concerns, edge cases, validation areas.
