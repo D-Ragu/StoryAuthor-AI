@@ -1,126 +1,95 @@
-# [TechDebt] Title
+# [TechDebt User Story] Title
 
 ## Persona & Goal
 
-As an engineering team,
+As an engineering team
 
-We want to improve [system/component/process],
+We want to improve [system/component/process]
 
-So that maintainability, reliability, scalability, or development velocity improves.
-
----
-
-## Overview
-
-Describe the current technical issue, architectural concern, limitation, or maintenance burden.
-
-Include:
-
-- What exists today
-- Why it is problematic
-- Why now is the right time to address it
-- Business or engineering impact
-
----
+So that maintainability, reliability, or engineering velocity improves.
 
 ## Current Problem
 
-Describe the technical debt in detail.
+Describe:
+
+- Current limitation
+- Why it is problematic
+- Technical impact
+- Why improvement is needed
 
 Examples:
 
+- Duplicated logic
 - Legacy implementation
-- Duplicate logic
-- Tight coupling
-- Security concerns
-- Performance bottlenecks
-- Unsupported dependency
 - Difficult-to-test code
-- Manual operational burden
-
----
+- Unsupported dependency
+- Tight coupling
+- Maintainability concerns
 
 ## Proposed Solution
 
-Describe the preferred technical direction.
+Describe the preferred improvement approach.
 
 Examples:
 
 - Refactor duplicated logic
 - Upgrade dependency
-- Introduce abstraction layer
-- Improve architecture boundaries
-- Add automation
+- Improve abstraction
+- Simplify implementation
 - Remove deprecated patterns
 
----
+Prefer incremental improvement over large rewrites.
 
 ## Acceptance Criteria
 
 ### Scenario 1: Improvement Completed
 
-Given the existing technical debt exists
+Given the existing technical limitation exists
 
 When the improvement is implemented
 
 Then the targeted area follows the new expected pattern
 
-And technical debt is reduced
+And maintainability improves.
 
 ### Scenario 2: Existing Behavior Preserved
 
-Given current supported workflows
+Given supported workflows exist
 
-When the technical change is introduced
+When the technical improvement is introduced
 
-Then existing behavior remains functional
+Then existing behavior continues functioning as expected.
 
-And regressions are prevented
+## Technical Notes & Constraints
 
----
+### Technical Constraints
 
-## Technical Notes
+Document:
 
-- Constraints
+- Scope boundaries
 - Dependencies
 - Migration concerns
 - Backward compatibility expectations
 - Risk areas
 
----
+### Dependencies
 
-## QA Notes
+Document dependencies if applicable.
 
-- Regression testing areas
-- Validation requirements
-- Observability/logging expectations
-- Manual verification guidance
+Otherwise:
 
----
+None.
 
-## Suggested Subtasks
+## Implementation Readiness
 
-- [ ] Technical design review
-- [ ] Development implementation
-- [ ] Unit/integration testing
-- [ ] Regression validation
-- [ ] Documentation updates
-- [ ] Deployment verification
+Independent: Yes / No
 
----
+Negotiable: Yes / No
 
-## Risks / Considerations
+Valuable: Yes / No
 
-- Known implementation risk
-- Rollback considerations
-- Timeline or dependency concerns
+Estimable: Yes / No
 
----
+Small: Yes / No
 
-## Definition of Done
-
-- [ ] Technical debt resolved
-- [ ] Tests added or updated
-- [ ] Regression testing completed
-- [ ] Documentation updated
-- [ ] Code reviewed and merged
+Testable: Yes / No

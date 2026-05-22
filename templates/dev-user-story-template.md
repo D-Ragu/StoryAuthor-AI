@@ -1,47 +1,12 @@
-# [User Story] Title
+# [Dev User Story] Title
 
 ## Persona & Goal
 
-As a [user/persona],
+As a [user/persona]
 
-I want [goal/action],
+I want [goal/action]
 
-So that [business value/outcome].
-
----
-
-## Overview
-
-Briefly explain:
-
-- The problem being solved
-- The desired outcome
-- Business value
-- Technical context (if relevant)
-
-Include:
-
-- Current behavior
-- Desired behavior
-- Constraints
-- Known assumptions
-
----
-
-## Business Value
-
-Why does this matter?
-
-Examples:
-
-- Improves user workflow
-- Reduces operational burden
-- Improves reliability
-- Reduces defects
-- Enables future work
-- Improves performance
-
----
+So that [business or user outcome]
 
 ## Acceptance Criteria
 
@@ -53,9 +18,7 @@ When [action occurs]
 
 Then [expected result occurs]
 
----
-
-### Scenario 2: Alternate Flow
+### Scenario 2: Alternate Behavior
 
 Given [alternate context]
 
@@ -63,70 +26,54 @@ When [action occurs]
 
 Then [expected result occurs]
 
----
-
-### Scenario 3: Regression Validation
+### Scenario 3: Regression Coverage
 
 Given existing supported behavior
 
 When related workflows are exercised
 
-Then existing functionality remains unchanged
+Then existing behavior continues functioning as expected.
 
----
+## Technical Notes & Constraints
 
-## Technical Notes
+### Design / UX
+
+Document relevant UX considerations.
+
+If no UI changes are expected, explicitly state:
+
+No UI changes expected.
+
+### Technical Constraints
 
 Document:
 
 - Relevant implementation details
 - Dependencies
 - Constraints
-- Risks
 - Backward compatibility concerns
-- Architecture considerations (only if relevant)
+- Regression-sensitive areas
 
----
+Avoid speculative implementation details.
 
-## QA Notes
+### Dependencies
 
-Validate:
+Document dependencies if applicable.
 
-- Happy path behavior
-- Regression scenarios
-- Edge cases
-- Error handling
-- Data validation where applicable
+Otherwise:
 
----
+None.
 
-## Suggested Subtasks
+## Implementation Readiness
 
-- [ ] Refine technical approach
-- [ ] Development implementation
-- [ ] Unit test coverage
-- [ ] Review/update QA test cases
-- [ ] Execute QA testing
-- [ ] Documentation updates if required
+Independent: Yes / No
 
----
+Negotiable: Yes / No
 
-## Risks / Considerations
+Valuable: Yes / No
 
-Document:
+Estimable: Yes / No
 
-- Known implementation risks
-- Rollback concerns
-- Technical limitations
-- Areas requiring additional validation
+Small: Yes / No
 
----
-
-## Definition of Done
-
-- [ ] Requirements implemented
-- [ ] Acceptance criteria satisfied
-- [ ] Unit tests added/updated
-- [ ] Regression testing completed
-- [ ] QA validation completed
-- [ ] Code reviewed and merged
+Testable: Yes / No

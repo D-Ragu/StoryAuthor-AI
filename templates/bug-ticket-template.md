@@ -1,117 +1,99 @@
-# [Bug] Title
+# [Bug User Story] Title
 
 ## Summary
 
-Brief description of the defect.
+Brief description of the issue.
 
-What is broken?
+Describe:
 
-Why does it matter?
-
----
+- What is broken
+- User or system impact
+- Severity if known
 
 ## Problem Statement
 
-Describe the issue in detail.
-
-Include:
+Describe:
 
 - Current behavior
 - Expected behavior
-- User/business impact
+- Business or user impact
 - Frequency or reproducibility
 
----
-
-## Steps to Reproduce
+## Steps To Reproduce
 
 1. Navigate to...
 2. Perform...
 3. Trigger...
 4. Observe...
 
----
-
 ## Expected Behavior
 
 Describe what should happen.
-
----
 
 ## Actual Behavior
 
 Describe what currently happens.
 
----
-
-## Root Cause (If Known)
+## Known Context
 
 Document:
 
-- suspected cause
-- confirmed cause
-- impacted components
-- related dependencies
+- Logs
+- Errors
+- Screenshots
+- Related workflows
+- Engineering observations
 
----
+Avoid guessing root cause unless confirmed.
 
 ## Acceptance Criteria
 
-### Scenario 1: Bug Resolution
+### Scenario 1: Issue Resolution
 
 Given the defect exists
 
-When the fix is applied
+When the fix is implemented
 
-Then the expected behavior occurs
+Then expected behavior occurs
 
-And the issue no longer reproduces
+And the issue no longer reproduces.
 
-### Scenario 2: Regression Prevention
+### Scenario 2: Regression Coverage
 
-Given related workflows
+Given related supported workflows exist
 
-When they are exercised
+When workflows are exercised
 
-Then existing functionality continues to work correctly
+Then existing functionality continues functioning correctly.
 
----
+## Technical Notes & Constraints
 
-## QA Notes
+### Technical Constraints
 
-Validate:
+Document:
 
-- Original defect no longer reproduces
-- Regression scenarios
-- Edge cases
-- Negative testing
+- Scope boundaries
+- Backward compatibility expectations
+- Regression-sensitive areas
 
----
+### Dependencies
 
-## Environment
+Document dependencies if applicable.
 
-- Version:
-- Environment:
-- Browser:
-- OS:
-- Logs/Screenshots:
+Otherwise:
 
----
+None.
 
-## Suggested Subtasks
+## Implementation Readiness
 
-- [ ] Root cause investigation
-- [ ] Development implementation
-- [ ] Unit test coverage
-- [ ] Regression testing
-- [ ] QA validation
+Independent: Yes / No
 
----
+Negotiable: Yes / No
 
-## Definition of Done
+Valuable: Yes / No
 
-- [ ] Issue resolved
-- [ ] Root cause documented
-- [ ] Regression testing completed
-- [ ] QA validated
-- [ ] Merged and deployed
+Estimable: Yes / No
+
+Small: Yes / No
+
+Testable: Yes / No

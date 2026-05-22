@@ -1,65 +1,16 @@
-# [QA] Title
+# [QA User Story] Title
 
 ## Persona & Goal
 
-As a QA engineer,
+As a QA engineer
 
-I want to validate [feature/change],
+I want to validate [feature/change]
 
-So that the implementation behaves correctly and regression risk is minimized.
-
----
-
-## Overview
-
-Briefly explain:
-
-- What changed
-- Why QA validation is needed
-- Primary risks
-- High-value validation areas
-
----
-
-## Test Scope
-
-### Functional Validation
-
-Validate:
-
-- Expected happy path behavior
-- Business requirements
-- User-facing functionality
-
-### Regression Validation
-
-Validate:
-
-- Existing workflows remain unaffected
-- Adjacent functionality still behaves correctly
-
-### Edge Cases
-
-Validate:
-
-- Invalid inputs
-- Boundary conditions
-- Error handling
-- Alternate workflows
-
-### Negative Testing
-
-Validate:
-
-- Invalid usage
-- Failure conditions
-- Unexpected states
-
----
+So that behavior remains correct and regression risk is minimized.
 
 ## Acceptance Criteria
 
-### Scenario 1: Functional Validation
+### Scenario 1: Primary Validation
 
 Given [starting condition]
 
@@ -67,57 +18,68 @@ When [feature/change is exercised]
 
 Then [expected result occurs]
 
-### Scenario 2: Regression Validation
+### Scenario 2: Alternate Validation
+
+Given [alternate condition]
+
+When [workflow executes]
+
+Then [expected result occurs]
+
+### Scenario 3: Regression Coverage
 
 Given existing supported functionality
 
 When related workflows are exercised
 
-Then behavior remains unchanged
+Then behavior continues functioning as expected.
 
-### Scenario 3: Edge Case Validation
+## Technical Notes & Constraints
 
-Given unexpected or invalid inputs
+### Design / UX
 
-When the workflow executes
+Document expected UX behavior.
 
-Then the system handles the scenario gracefully
+If unchanged:
 
----
+No UI changes expected.
 
-## Test Data Requirements
+### Technical Constraints
 
-- Sample data
-- Edge case data
-- Invalid data
-- Regression datasets
+Document:
 
----
+- Functional validation requirements
+- Regression-sensitive areas
+- Workflow expectations
+- Backward compatibility expectations
 
-## QA Notes
+### Regression Coverage
 
-- High-risk areas
-- Logging expectations
-- Monitoring expectations
-- Areas requiring extra attention
+Validate:
 
----
+- Existing workflows
+- Edge cases
+- Error handling
+- Supported scenarios
 
-## Suggested QA Subtasks
+### Dependencies
 
-- [ ] Review/update test cases
-- [ ] Execute functional testing
-- [ ] Execute regression testing
-- [ ] Execute edge case validation
-- [ ] Capture defects if needed
-- [ ] Provide QA signoff notes
+Document dependencies if applicable.
 
----
+Otherwise:
 
-## Definition of Done
+None.
 
-- [ ] Functional testing completed
-- [ ] Regression testing completed
-- [ ] Edge cases validated
-- [ ] Defects documented
-- [ ] QA signoff complete
+## Implementation Readiness
+
+Independent: Yes / No
+
+Negotiable: Yes / No
+
+Valuable: Yes / No
+
+Estimable: Yes / No
+
+Small: Yes / No
+
+Testable: Yes / No
