@@ -1,44 +1,117 @@
-name: Bug Report
-description: Report a defect
-title: "[Bug]: "
-labels:
-  - bug
-body:
-  - type: textarea
-    id: summary
-    attributes:
-      label: Summary
-      description: What is broken?
-    validations:
-      required: true
+# [Bug] Title
 
-  - type: textarea
-    id: steps
-    attributes:
-      label: Steps to Reproduce
-      placeholder: |
-        1. Go to...
-        2. Click...
-        3. Observe...
-    validations:
-      required: true
+## Summary
 
-  - type: textarea
-    id: expected
-    attributes:
-      label: Expected Behavior
-    validations:
-      required: true
+Brief description of the defect.
 
-  - type: textarea
-    id: actual
-    attributes:
-      label: Actual Behavior
-    validations:
-      required: true
+What is broken?
 
-  - type: textarea
-    id: environment
-    attributes:
-      label: Environment
-      placeholder: Browser, IDE, version, OS, etc.
+Why does it matter?
+
+---
+
+## Problem Statement
+
+Describe the issue in detail.
+
+Include:
+
+- Current behavior
+- Expected behavior
+- User/business impact
+- Frequency or reproducibility
+
+---
+
+## Steps to Reproduce
+
+1. Navigate to...
+2. Perform...
+3. Trigger...
+4. Observe...
+
+---
+
+## Expected Behavior
+
+Describe what should happen.
+
+---
+
+## Actual Behavior
+
+Describe what currently happens.
+
+---
+
+## Root Cause (If Known)
+
+Document:
+
+- suspected cause
+- confirmed cause
+- impacted components
+- related dependencies
+
+---
+
+## Acceptance Criteria
+
+### Scenario 1: Bug Resolution
+
+Given the defect exists
+
+When the fix is applied
+
+Then the expected behavior occurs
+
+And the issue no longer reproduces
+
+### Scenario 2: Regression Prevention
+
+Given related workflows
+
+When they are exercised
+
+Then existing functionality continues to work correctly
+
+---
+
+## QA Notes
+
+Validate:
+
+- Original defect no longer reproduces
+- Regression scenarios
+- Edge cases
+- Negative testing
+
+---
+
+## Environment
+
+- Version:
+- Environment:
+- Browser:
+- OS:
+- Logs/Screenshots:
+
+---
+
+## Suggested Subtasks
+
+- [ ] Root cause investigation
+- [ ] Development implementation
+- [ ] Unit test coverage
+- [ ] Regression testing
+- [ ] QA validation
+
+---
+
+## Definition of Done
+
+- [ ] Issue resolved
+- [ ] Root cause documented
+- [ ] Regression testing completed
+- [ ] QA validated
+- [ ] Merged and deployed

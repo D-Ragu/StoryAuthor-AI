@@ -1,36 +1,123 @@
-name: QA Story
-description: Create QA validation work
-title: "[QA]: "
-labels:
-  - qa
-body:
-  - type: textarea
-    id: feature
-    attributes:
-      label: Feature / Change
-      description: What is being tested?
-      placeholder: Link story or describe feature.
-    validations:
-      required: true
+# [QA] Title
 
-  - type: textarea
-    id: scope
-    attributes:
-      label: Testing Scope
-      description: What should QA validate?
-      placeholder: Functional, regression, edge cases, negative testing.
-    validations:
-      required: true
+## Persona & Goal
 
-  - type: textarea
-    id: risks
-    attributes:
-      label: Regression Risks
-      description: Areas most likely to break
-      placeholder: Existing workflows impacted.
+As a QA engineer,
 
-  - type: textarea
-    id: notes
-    attributes:
-      label: Notes
-      description: Additional QA guidance
+I want to validate [feature/change],
+
+So that the implementation behaves correctly and regression risk is minimized.
+
+---
+
+## Overview
+
+Briefly explain:
+
+- What changed
+- Why QA validation is needed
+- Primary risks
+- High-value validation areas
+
+---
+
+## Test Scope
+
+### Functional Validation
+
+Validate:
+
+- Expected happy path behavior
+- Business requirements
+- User-facing functionality
+
+### Regression Validation
+
+Validate:
+
+- Existing workflows remain unaffected
+- Adjacent functionality still behaves correctly
+
+### Edge Cases
+
+Validate:
+
+- Invalid inputs
+- Boundary conditions
+- Error handling
+- Alternate workflows
+
+### Negative Testing
+
+Validate:
+
+- Invalid usage
+- Failure conditions
+- Unexpected states
+
+---
+
+## Acceptance Criteria
+
+### Scenario 1: Functional Validation
+
+Given [starting condition]
+
+When [feature/change is exercised]
+
+Then [expected result occurs]
+
+### Scenario 2: Regression Validation
+
+Given existing supported functionality
+
+When related workflows are exercised
+
+Then behavior remains unchanged
+
+### Scenario 3: Edge Case Validation
+
+Given unexpected or invalid inputs
+
+When the workflow executes
+
+Then the system handles the scenario gracefully
+
+---
+
+## Test Data Requirements
+
+- Sample data
+- Edge case data
+- Invalid data
+- Regression datasets
+
+---
+
+## QA Notes
+
+- High-risk areas
+- Logging expectations
+- Monitoring expectations
+- Areas requiring extra attention
+
+---
+
+## Suggested QA Subtasks
+
+- [ ] Review/update test cases
+- [ ] Execute functional testing
+- [ ] Execute regression testing
+- [ ] Execute edge case validation
+- [ ] Capture defects if needed
+- [ ] Provide QA signoff notes
+
+---
+
+## Definition of Done
+
+- [ ] Functional testing completed
+- [ ] Regression testing completed
+- [ ] Edge cases validated
+- [ ] Defects documented
+- [ ] QA signoff complete
