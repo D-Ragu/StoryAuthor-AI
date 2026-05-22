@@ -1,370 +1,322 @@
-# StoryAuthor-AI
+# StoryAuthor-AI — Opinionated AI-Assisted User Story Generation
 
-<p align="center">
-  <h3 align="center">
-    AI-Powered Engineering Artifact Authoring
-  </h3>
+**Generate sprint-ready engineering user stories from rough requirements.**
 
-  <p align="center">
-    Transform rough requirements into sprint-ready engineering deliverables.
-  </p>
-</p>
+StoryAuthor-AI is an opinionated framework for transforming incomplete engineering requirements into **clear, testable, sprint-ready user stories** using AI.
 
----
+Built for engineers who are tired of:
 
-## 🚀 What is StoryAuthor-AI?
+- vague tickets
+- weak acceptance criteria
+- missing QA scope
+- over-engineered AI output
+- stories that are not sprint-ready
 
-**StoryAuthor-AI** is an open-source framework for generating **high-quality engineering artifacts using AI**.
+StoryAuthor-AI prioritizes:
 
-Instead of spending time manually writing:
-
-- User Stories
-- QA Stories
-- Tech Debt Tickets
-- PR Descriptions
-- Acceptance Criteria
-- Sprint Review Scripts
-- Release Notes
-
-StoryAuthor-AI provides a **repeatable workflow system** that transforms rough requirements into **sprint-ready deliverables**.
-
-Compatible with:
-
-- GitHub Copilot
-- ChatGPT
-- Claude
-- Cursor
-- VS Code AI workflows
-- Enterprise AI platforms
+- **behavior-first requirements**
+- **strict Given / When / Then acceptance criteria**
+- **regression awareness**
+- **implementation boundaries**
+- **low ambiguity**
+- **engineering realism**
 
 ---
 
 ## 🤔 Why StoryAuthor-AI?
 
-Engineering teams often lose time to inconsistent documentation.
+Most AI-generated user stories suffer from the same problems:
 
-Common problems:
+❌ Too vague  
+❌ Too implementation-heavy  
+❌ Missing QA considerations  
+❌ Not sprint-ready  
+❌ Poor acceptance criteria  
+❌ Mini architecture documents disguised as tickets
 
-❌ Poorly written Jira stories  
-❌ Weak acceptance criteria  
-❌ Missing QA scope  
-❌ Inconsistent PR descriptions  
-❌ Unclear technical requirements  
-❌ Tickets that are not sprint-ready
+StoryAuthor-AI solves this with an opinionated framework designed around **how engineers actually work**.
 
-Most AI-generated stories are too vague, too generic, or lack engineering rigor.
+Instead of generating technical RFCs, StoryAuthor-AI produces:
 
-**StoryAuthor-AI fixes this with structured prompt workflows and reusable engineering standards.**
-
----
-
-# ✨ Features
-
-### Product & Agile Artifacts
-
-✅ User Stories  
-✅ QA Stories  
-✅ Tech Debt Tickets  
-✅ Bug Tickets  
-✅ Acceptance Criteria  
-✅ Suggested Subtasks  
-✅ Sprint Review Scripts  
-✅ Release Notes
-
-### Engineering Workflows
-
-✅ PR Description Authoring  
-✅ Technical Context Injection  
-✅ Risk Analysis Support  
-✅ Testing Guidance  
-✅ Sprint-Ready Formatting
-
-### Built-in Standards
-
-✅ INVEST-compliant stories  
-✅ 3 C’s methodology  
-✅ Given / When / Then acceptance criteria  
-✅ Reusable engineering templates
+> alignment artifacts engineers can realistically refine and drop into Jira or Azure DevOps.
 
 ---
 
-# 🏗 Example Workflow
+## Supported Story Types
 
-## Input
+StoryAuthor-AI supports four engineering-focused user story types:
+
+| Type | Purpose |
+|-------|----------|
+| Dev User Story | Sprint-ready implementation work |
+| QA User Story | Validation and regression coverage |
+| TechDebt User Story | Maintainability and engineering improvements |
+| Bug User Story | Structured defect documentation |
+
+All story types follow a consistent structure:
+
+1. Title  
+2. Persona & Goal  
+3. Acceptance Criteria  
+4. Technical Notes & Constraints  
+5. Implementation Readiness
+
+---
+
+## Core Principles
+
+StoryAuthor-AI is intentionally opinionated.
+
+Generated stories should be:
+
+### Clear
+
+Requirements should be specific and understandable.
+
+### Testable
+
+Acceptance criteria must support validation.
+
+### Practical
+
+Stories should feel usable by engineering teams.
+
+### Regression-Aware
+
+Existing supported behavior matters.
+
+### Low Ambiguity
+
+Reduce guesswork during implementation.
+
+### Behavior-First
+
+Focus on expected outcomes before implementation details.
+
+---
+
+## Example
+
+### Input
 
 ```text
-Feature Request:
-Prevent duplicate customer signatures
-during XML generation edge cases.
+We have duplicate retry logic spread across several services.
 
-Root Cause:
-Duplicate writes may occur in rare
-transaction execution paths.
+Retry behavior has drifted over time, making onboarding harder and increasing maintenance cost.
 
-Goal:
-Prevent duplicate signatures without
-changing existing system behavior.
+We want to improve consistency without changing observable behavior.
 
 Requirements:
-- Maintain backward compatibility
-- Avoid regressions
-- Ensure easy QA validation
+- preserve backward compatibility
+- avoid major refactors
+- low regression risk
 ```
 
----
-
-## Command
+### Prompt
 
 ```text
-/build-user-story
+Use StoryAuthor-AI conventions.
+
+Create a tech debt user story.
+```
+
+### Output (Excerpt)
+
+```md
+Title
+
+Standardize retry behavior across services (Tech Debt)
+
+Persona & Goal
+
+As an engineer onboarding to the codebase
+
+I want consistent, well-documented retry behavior across services
+
+So that maintenance is easier, onboarding is faster, and behaviors remain predictable
+
+Acceptance Criteria
+
+Scenario 1: Preserve existing observable behavior
+
+Given services currently have divergent retry behaviors in production
+
+When a service adopts the standardized behavior
+
+Then observable retry behavior remains unchanged
 ```
 
 ---
 
-## Output
-
-StoryAuthor-AI generates:
-
-✅ Sprint-ready User Story  
-✅ Acceptance Criteria  
-✅ Suggested Subtasks  
-✅ QA Story  
-✅ PR Description  
-✅ Sprint Review Script
-
----
-
-# 🧱 Repository Structure
+## Repository Structure
 
 ```text
 storyauthor-ai/
 │
+├── .github/
+│   └── copilot-instructions.md
+│
 ├── prompts/
-│   ├── user-story.prompt.md
+│   ├── dev-user-story.prompt.md
 │   ├── qa-story.prompt.md
 │   ├── tech-debt.prompt.md
-│   ├── bug-ticket.prompt.md
-│   ├── pr-description.prompt.md
-│   ├── sprint-review.prompt.md
-│   └── release-notes.prompt.md
+│   └── bug-ticket.prompt.md
 │
 ├── templates/
-│   ├── user-story-template.md
-│   ├── qa-story-template.md
-│   ├── tech-debt-template.md
-│   ├── bug-ticket-template.md
-│   └── pr-description-template.md
+│   └── user-story-template.md
 │
 ├── standards/
-│   ├── invest.md
-│   ├── three-cs.md
+│   ├── engineering-principles.md
 │   ├── given-when-then.md
-│   └── engineering-principles.md
+│   ├── invest.md
+│   └── three-cs.md
 │
 ├── examples/
-│   ├── feature-story-example.md
+│   ├── dev-user-story-example.md
 │   ├── qa-story-example.md
 │   ├── tech-debt-example.md
-│   ├── pr-description-example.md
-│   └── sprint-review-example.md
-│
-├── integrations/
-│   ├── github-copilot/
-│   ├── chatgpt/
-│   ├── claude/
-│   └── cursor/
+│   └── bug-ticket-example.md
 │
 └── docs/
     ├── getting-started.md
-    ├── customization.md
-    └── enterprise-adoption.md
+    └── customization.md
 ```
 
 ---
 
-# ⚡ Quick Start
+## Quick Start
 
-## 1. Clone the Repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/StoryAuthor-AI.git
 ```
 
----
+### 2. Open the Repository in VS Code
 
-## 2. Choose an Artifact Type
+GitHub Copilot works best when repository context is available.
+
+StoryAuthor-AI includes:
+
+```text
+.github/copilot-instructions.md
+```
+
+to help steer output quality and formatting.
+
+### 3. Choose a Story Type
+
+Examples:
+
+```text
+prompts/dev-user-story.prompt.md
+prompts/qa-story.prompt.md
+prompts/tech-debt.prompt.md
+prompts/bug-ticket.prompt.md
+```
+
+### 4. Paste a Rough Requirement
 
 Example:
 
 ```text
-prompts/user-story.prompt.md
+We occasionally send duplicate password reset emails during retry failures.
+
+Requirements:
+- preserve current behavior
+- low regression risk
+- no UI changes
 ```
 
----
-
-## 3. Paste Your Requirement
-
-Example:
-
-```text
-We need to prevent duplicate signatures
-from being written to XML during edge-case
-transaction flows.
-
-The solution must remain backward compatible
-and easy to validate in QA.
-```
-
----
-
-## 4. Run With Your Preferred AI Assistant
+### 5. Generate a Story
 
 Example prompt:
 
 ```text
-Use user-story.prompt.md.
+Use StoryAuthor-AI conventions.
 
-Generate a sprint-ready user story
-from the following requirement:
-
-[paste requirement here]
+Create a bug user story.
 ```
 
 ---
 
-# 📋 Included Artifact Types
+## Engineering Standards
 
-| Artifact | Purpose |
-|----------|----------|
-| User Story | Sprint-ready feature development |
-| QA Story | Testing scope and validation |
-| Tech Debt Story | Internal engineering improvements |
-| Bug Ticket | Structured defect documentation |
-| PR Description | Pull request communication |
-| Sprint Review Script | Stakeholder demos |
-| Release Notes | Change communication |
+StoryAuthor-AI encourages:
 
----
+### Given / When / Then
 
-# 🧠 Engineering Standards
+Acceptance criteria are written using strict behavioral scenarios:
 
-StoryAuthor-AI follows proven Agile and engineering practices.
+```text
+Scenario 1: Existing Behavior Remains Functional
 
-## INVEST
+Given supported workflows exist
 
-Stories should be:
+When the enhancement is implemented
 
-- **Independent**
-- **Negotiable**
-- **Valuable**
-- **Estimable**
-- **Small**
-- **Testable**
+Then existing behavior remains unchanged
+```
 
----
+### Regression Awareness
 
-## 3 C’s
+Stories should preserve supported behavior whenever possible.
 
-Every story includes:
+### Implementation Boundaries
 
-### Card
-The requirement itself.
+Stories define:
 
-### Conversation
-Supporting context and intent.
+> what engineering should align on
 
-### Confirmation
-Clear acceptance criteria.
+not
+
+> how engineering must implement it
 
 ---
 
-## Given / When / Then
+## Non-Goals
 
-Acceptance criteria are structured for:
+StoryAuthor-AI does **not** attempt to:
 
-- Testability
-- QA readiness
-- Sprint execution
-- Engineering clarity
+- replace engineers
+- replace product managers
+- generate production code
+- generate architecture RFCs
+- over-prescribe implementation
 
----
+This project focuses on:
 
-# 🎯 Project Goals
-
-StoryAuthor-AI aims to:
-
-- Improve engineering communication
-- Reduce ticket-writing overhead
-- Improve sprint readiness
-- Standardize engineering artifacts
-- Increase delivery consistency
-- Accelerate software delivery with AI
+> improving engineering communication quality.
 
 ---
 
-# 🚫 Non-Goals
-
-StoryAuthor-AI does **not** aim to:
-
-- Replace product managers
-- Replace engineers
-- Generate production code automatically
-- Force a specific Agile methodology
-
-Instead, it helps teams create **higher-quality engineering communication faster**.
-
----
-
-# 🛣 Roadmap
-
-## v1 — Foundation
-
-- [ ] Prompt framework
-- [ ] User story generation
-- [ ] QA story generation
-- [ ] Tech debt templates
-- [ ] PR description workflows
-- [ ] Standards library
-- [ ] Example workflows
-
-## v2 — Workflow Intelligence
-
-- [ ] Multi-artifact generation
-- [ ] Context-aware prompting
-- [ ] Engineering persona support
-- [ ] Output chaining
-
-## v3 — Integrations
-
-- [ ] GitHub Copilot workflows
-- [ ] Jira integration
-- [ ] Azure DevOps integration
-- [ ] IDE workflows
-
----
-
-# 🤝 Contributing
+## Contributing
 
 Contributions are welcome.
 
-Ideas include:
+Areas of interest:
 
-- Better prompt patterns
-- Additional artifact types
-- Engineering templates
-- AI integrations
-- Workflow improvements
+- better prompt patterns
+- improved examples
+- story quality improvements
+- engineering workflow feedback
 
 ---
 
-# 📜 License
+## License
 
 MIT License
 
-Use it. Improve it. Make engineering communication better.
-
 ---
 
-## ⭐ If you find this useful
+## Philosophy
 
-Consider starring the repository and contributing feedback.
+StoryAuthor-AI favors:
+
+> practical engineering execution
+
+over
+
+> theoretical completeness
+
+A good user story should help engineering teams align quickly, reduce ambiguity, and move work forward.
