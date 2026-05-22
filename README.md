@@ -189,7 +189,7 @@ storyauthor-ai/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/StoryAuthor-AI.git
+git clone https://github.com/D-Ragu/StoryAuthor-AI.git
 ```
 
 ### 2. Open the Repository in VS Code
