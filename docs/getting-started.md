@@ -141,15 +141,17 @@ This helps GitHub Copilot understand:
 Example prompt:
 
 ```txt
-Create a sprint-ready dev user story.
-
-Requirement:
-Prevent duplicate notifications during retry scenarios.
+Using the existing project architecture, business rules, and engineering standards, create a sprint-ready user story to standardize retry behavior across services.
 
 Requirements:
-- Preserve backward compatibility
-- Avoid regressions
-- Easy QA validation
+- Preserve existing observable behavior
+- Allow incremental adoption
+- Avoid breaking existing services
+- Use INVEST principles
+- Include Given-When-Then acceptance criteria
+- Include technical risks and migration concerns
+- Maintain backward compatibility
+- Consider onboarding and long-term maintainability
 ```
 
 Expected output:
